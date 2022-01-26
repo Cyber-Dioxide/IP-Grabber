@@ -1,3 +1,6 @@
+# Use with python3
+# Version 2.0
+
 import random
 import socket
 import os
@@ -41,6 +44,7 @@ R = Fore.RED
 G = Fore.GREEN
 C = Fore.CYAN
 Y = Fore.YELLOW
+
 yes = ['y' , 'yes']
 no = ['n' , 'no']
 
@@ -50,6 +54,8 @@ def clr():
 
 clr()
 
+def cprint(str):
+    print(f"{W}[{C}>{W}]{C} {str}")
 
 
 def error(str):
@@ -165,7 +171,7 @@ def main():
         ip_gen.append(ip)
 
 
-        print(C + f"{G}Trying to find country...{W}{ip}")
+        cprint(f"Trying to find country...{W}{ip}")
 
 
 
@@ -181,12 +187,14 @@ def main():
 
             else:
                 print(f"{R}{ip} is not valid :{W} {ip_cont['country_name']}\n")
+                with open("AllCountriesIP.txt" , "a+") as ipp:
+                    ipp.write(ip)
 
         except KeyError:
             print(R + "Not valid ip")
 
         except KeyboardInterrupt:
-            print(R + "Not valid ip")
+            cprint("Exiting...")
             sys.exit()
         except Exception:
             error("\nSwitching ip scanner...\n")
@@ -217,10 +225,11 @@ def main():
                     print(f"{R}{ip} is not valid : {W}{ip_cont['country_name']}\n")
 
             except KeyError:
-                print(R + "Not valid ip")
+                error(R + "Not valid ip")
 
             except KeyboardInterrupt:
-                error("Good Bye")
+                cprint("Good Bye")
+                sys.exit()
             
             except Exception as e:
                 error(e)
@@ -251,13 +260,13 @@ def main():
             error("Exitiing.....")
             tr = False
         except KeyError:
-            error("Fixing error....")
+            cprint(f"{R}Fixing error....")
 
 
         
         if len(value) == px:
             clr()
-            print(f"{C}\nEstablishing connection again...")
+            cprint(f"{C}\nEstablishing connection again...")
             px = 0
         else:
             pass
