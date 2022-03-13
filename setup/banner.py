@@ -1,7 +1,14 @@
 import os
 import platform
 from setup import colors
-from setup.colors import r,g,y,c
+from setup.colors import r,g,y,c , w
+from colorama import Fore , Back
+
+GB = Back.GREEN
+YB = Back.YELLOW
+WB = Back.RED
+
+
 
 logo = f"""
  ▄█     ▄███████▄                                   
@@ -16,13 +23,13 @@ logo = f"""
    ▄██████▄     ▄████████    ▄████████ ▀█████████▄  
   ███    ███   ███    ███   ███    ███   ███    ███ 
   ███    █▀    ███    ███   ███    ███   ███    ███ 
- ▄███         ▄███▄▄▄▄██▀   ███    ███  ▄███▄▄▄██▀  
-▀▀███ ████▄  ▀▀███▀▀▀▀▀   ▀███████████ ▀▀███▀▀▀██▄  
-  ███    ███ ▀███████████   ███    ███   ███    ██▄ 
+ ▄███         ▄███▄▄▄▄██▀   ███    ███  ▄███▄▄▄██▀  {w}<{y}/{w}> {GB}{w}Instagram : @saadkhan041 {Back.RESET}
+▀▀███ ████▄  ▀▀███▀▀▀▀▀   ▀███████████ ▀▀███▀▀▀██▄  {w}<{y}/{w}> {YB}{w}Instagram : @coding_memz {Back.RESET}
+  ███    ███ ▀███████████   ███    ███   ███    ██▄  {w}<{y}/{w}> {WB}{w}Github: Saadkhan041 {Back.RESET}
   ███    ███   ███    ███   ███    ███   ███    ███ 
   ████████▀    ███    ███   ███    █▀  ▄█████████▀  
                ███    ███                           
-                             {c + "Author: "+y +"Saad Khan"}                                                                                                           
+                             {y}<{w}/{y}> {c}Author: {w}Saad Khan                                                                                                           
 """
 c = colors
 try:
@@ -32,7 +39,6 @@ except ModuleNotFoundError:
 
 def banner():
     print(c.ran + logo)
-    print(c.ran + '-'*60)
 
 
 
@@ -52,4 +58,4 @@ def clear():
     if "Windows" in s:
         os.system("cls")
     else:
-        os.system("clear")
+        os.system("cls") if "Windows" in platform.platform() else os.system("clear")
