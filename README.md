@@ -4,7 +4,7 @@ A tool to generate valid ip addresses of 55 countries. These ip's can be used fo
 # Usage
 1. apt install python3
 2. apt install git
-3. git clone https://github.com/Saadkhan041/IP-Grabber
+3. git clone https://github.com/Cyber-Dioxide/IP-Grabber
 4. cd IP-Grabber
 5. python3 grabber.py
 6. It might take long depending upon selected country
@@ -13,10 +13,9 @@ A tool to generate valid ip addresses of 55 countries. These ip's can be used fo
 
 # Screenshot
 _UpDate
-![Screenshot (236)](https://user-images.githubusercontent.com/93708296/158071977-050da9ba-691f-44ee-8e37-e1d167562b0d.png)
 
-
-![Screenshot (208)](https://user-images.githubusercontent.com/93708296/150937041-bf2009f9-bfb4-41ae-95ef-eec279e4d9bc.png)
+![Screenshot (259)](https://user-images.githubusercontent.com/93708296/160671448-081a30d7-9965-4429-bbd3-f5f84abca071.png)
+![Screenshot (260)](https://user-images.githubusercontent.com/93708296/160671462-377bfd53-2c02-4cc9-a29b-c0d7771a371e.png)
 
 # Help
-For any help, support iam mostly active on instagram @coding_memz , @saadkhan041
+For any help, support iam mostly active on instagram @cyber_dioxide , @cyber_dioxide_
