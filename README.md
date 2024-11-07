@@ -21,4 +21,4 @@ _UpDate
 ![Screenshot (260)](https://user-images.githubusercontent.com/93708296/160671462-377bfd53-2c02-4cc9-a29b-c0d7771a371e.png)
 
 # Help
-For any help, support iam mostly active on [Telegram](https://www.cyberdioxide.com/p/contact.html)
+For any help, support iam mostly active on [Telegram](https://www.cyox2.com/p/contact.html)
